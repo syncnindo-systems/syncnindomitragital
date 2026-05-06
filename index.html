@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syncnindo | Sistem Otomasi Operasional</title>
+    <title>Syncnindo | Satu Sistem Untuk Seluruh Operasional Bisnis</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,132 +12,174 @@
             theme: {
                 extend: {
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: { primary: '#2563eb', secondary: '#475569' }
+                    colors: {
+                        slate: { 800: '#1e293b', 900: '#0f172a' },
+                        primary: '#017E84', /* Odoo-like Teal/Primary */
+                        app: {
+                            purple: '#875A7B',
+                            orange: '#E46F25',
+                            blue: '#2C82C9',
+                            green: '#37A279'
+                        }
+                    }
                 }
             }
         }
     </script>
+    <style>
+        body { background-color: #ffffff; color: #333333; }
+        .app-icon { transition: transform 0.2s ease-in-out; }
+        .app-card:hover .app-icon { transform: translateY(-5px); }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans antialiased">
+<body class="antialiased font-sans selection:bg-primary selection:text-white">
 
-    <nav class="bg-white border-b border-slate-200 fixed w-full top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="bg-primary text-white p-2 rounded">
-                    <i data-lucide="layers" class="w-5 h-5"></i>
+    <nav class="border-b border-gray-200 bg-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl font-bold text-slate-900 tracking-tight">Syncnindo</span>
                 </div>
-                <span class="text-xl font-extrabold tracking-tight">Syncnindo<span class="text-primary">.</span></span>
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
+                    <a href="#apps" class="hover:text-primary transition-colors">Aplikasi</a>
+                    <a href="#kredibilitas" class="hover:text-primary transition-colors">Standar Industri</a>
+                </div>
+                <div class="flex items-center">
+                    <a href="https://wa.me/628155078676" class="bg-primary text-white px-5 py-2 rounded text-sm font-bold hover:bg-teal-700 transition-colors">
+                        Jadwalkan Demo
+                    </a>
+                </div>
             </div>
-            <a href="https://wa.me/628155078676" class="bg-slate-900 hover:bg-primary text-white px-5 py-2 rounded-lg text-sm font-semibold transition-colors">
-                Konsultasi Sistem
-            </a>
         </div>
     </nav>
 
-    <section class="pt-32 pb-20 px-6 bg-white border-b border-slate-200">
-        <div class="container mx-auto max-w-4xl text-center">
-            <span class="text-primary font-bold tracking-wider text-sm uppercase mb-4 block">Digital Operations Agency</span>
-            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
-                Bereskan Data Anda.<br>Amankan Aset Bisnis Anda.
+    <section class="bg-[#F9F9F9] pt-20 pb-24 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-slate-900 mb-6 tracking-tight">
+                Satu platform untuk<br>seluruh operasional Anda.
             </h1>
-            <p class="text-lg text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Kami mensinkronkan operasional bisnis yang masih manual dan berantakan menjadi sistem digital yang otomatis, akurat, dan terintegrasi penuh.
+            <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Tinggalkan sistem manual dan tumpukan kertas. Syncnindo menghadirkan modul aplikasi digital untuk mengotomatisasi, mengamankan, dan melacak data bisnis Anda dari satu dasbor.
             </p>
-            <div class="flex justify-center gap-8 text-sm font-semibold text-slate-500">
-                <span class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary"></i> Berbasis Cloud</span>
-                <span class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary"></i> Data Real-Time</span>
-                <span class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary"></i> Keamanan Standar Industri</span>
+            <div class="flex justify-center gap-4">
+                <a href="https://wa.me/628155078676" class="bg-primary text-white px-8 py-3 rounded font-bold text-lg hover:bg-teal-700 transition-colors shadow-lg shadow-teal-500/30">
+                    Mulai Transformasi
+                </a>
+            </div>
+            
+            <div class="mt-16 max-w-4xl mx-auto bg-white rounded-t-xl shadow-2xl border border-gray-200 overflow-hidden h-[300px] relative">
+                <div class="bg-slate-800 h-10 w-full flex items-center px-4 gap-2">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <div class="p-8 grid grid-cols-4 gap-6 opacity-30">
+                    <div class="h-4 bg-gray-200 rounded w-full"></div>
+                    <div class="h-4 bg-gray-200 rounded w-full"></div>
+                    <div class="h-4 bg-gray-200 rounded w-full"></div>
+                    <div class="h-4 bg-gray-200 rounded w-full"></div>
+                    <div class="h-20 bg-gray-200 rounded w-full col-span-4 mt-4"></div>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#F9F9F9] to-transparent"></div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6 bg-slate-50">
-        <div class="container mx-auto max-w-6xl">
+    <section id="apps" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">Solusi Spesifik Untuk Industri Anda</h2>
-                <p class="text-slate-600">Arsitektur sistem yang dirancang khusus untuk menyelesaikan inefisiensi di berbagai sektor bisnis.</p>
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Pilih modul sesuai kebutuhan bisnis Anda</h2>
+                <p class="text-gray-600 text-lg">Infrastruktur yang dapat disesuaikan untuk skala operasional apa pun.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="car" class="w-6 h-6"></i>
+                <div class="app-card cursor-pointer group">
+                    <div class="bg-app-purple w-20 h-20 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 app-icon shadow-lg shadow-purple-500/20">
+                        <i data-lucide="shield-check" class="w-10 h-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Manajemen Rental & Keamanan Aset</h3>
-                    <p class="text-slate-600 mb-6 text-sm leading-relaxed">Sistem verifikasi Digital KYC terintegrasi untuk menyaring profil penyewa. Mitigasi risiko kehilangan unit secara signifikan dan otomatisasi reservasi tanpa kertas.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Digital KYC</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Asset Tracking</span>
-                    </div>
+                    <h3 class="text-xl font-bold text-center text-slate-900 mb-2">Sync-Secure</h3>
+                    <p class="text-center text-gray-500 text-sm mb-4">Manajemen Armada & Rental</p>
+                    <p class="text-gray-600 text-sm text-center leading-relaxed">
+                        Sistem verifikasi Digital KYC. Mitigasi risiko kehilangan aset dan otomatisasi manajemen armada Anda secara tersentralisasi.
+                    </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="factory" class="w-6 h-6"></i>
+                <div class="app-card cursor-pointer group">
+                    <div class="bg-app-orange w-20 h-20 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 app-icon shadow-lg shadow-orange-500/20">
+                        <i data-lucide="factory" class="w-10 h-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Otomasi Produksi & Rantai Pasok</h3>
-                    <p class="text-slate-600 mb-6 text-sm leading-relaxed">Dasbor operasional untuk memantau ketersediaan stok bahan baku dari lapangan hingga hasil produksi akhir. Jaga integritas data rantai pasok secara real-time.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Inventory Control</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Supply Chain</span>
-                    </div>
+                    <h3 class="text-xl font-bold text-center text-slate-900 mb-2">Sync-Production</h3>
+                    <p class="text-center text-gray-500 text-sm mb-4">Rantai Pasok & Inventaris</p>
+                    <p class="text-gray-600 text-sm text-center leading-relaxed">
+                        Dasbor operasional real-time. Pantau pergerakan stok bahan baku dan pastikan integritas data pabrik secara akurat.
+                    </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="bar-chart-4" class="w-6 h-6"></i>
+                <div class="app-card cursor-pointer group">
+                    <div class="bg-app-green w-20 h-20 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 app-icon shadow-lg shadow-green-500/20">
+                        <i data-lucide="bar-chart-2" class="w-10 h-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Intelijen Pasar & Visualisasi Data</h3>
-                    <p class="text-slate-600 mb-6 text-sm leading-relaxed">Alat analisis teknikal dan pemetaan wilayah (Territory Mapping) untuk mendukung ekspansi. Pengambilan keputusan bisnis berbasis data yang presisi.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Territory Mapping</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Data Analytics</span>
-                    </div>
+                    <h3 class="text-xl font-bold text-center text-slate-900 mb-2">Sync-Market</h3>
+                    <p class="text-center text-gray-500 text-sm mb-4">Intelijen Pasar</p>
+                    <p class="text-gray-600 text-sm text-center leading-relaxed">
+                        Sistem pemetaan wilayah (Territory Mapping) dan visualisasi data teknikal untuk mendukung keputusan ekspansi bisnis.
+                    </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-green-50 text-green-600 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="store" class="w-6 h-6"></i>
+                <div class="app-card cursor-pointer group">
+                    <div class="bg-app-blue w-20 h-20 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 app-icon shadow-lg shadow-blue-500/20">
+                        <i data-lucide="shopping-bag" class="w-10 h-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Sistem Administrasi Retail</h3>
-                    <p class="text-slate-600 mb-6 text-sm leading-relaxed">Eliminasi pembukuan manual. Dasbor pencatatan transaksi penjualan dan sinkronisasi laporan laba/rugi harian yang bisa dipantau langsung dari smartphone Anda.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Point of Sale</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Automated Reports</span>
-                    </div>
+                    <h3 class="text-xl font-bold text-center text-slate-900 mb-2">Sync-Flow</h3>
+                    <p class="text-center text-gray-500 text-sm mb-4">Distribusi & Retail (POS)</p>
+                    <p class="text-gray-600 text-sm text-center leading-relaxed">
+                        Aplikasi pencatatan otomatis. Eliminasi pembukuan manual dan pantau arus kas harian dari ponsel Anda.
+                    </p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section class="py-16 bg-slate-900 text-white">
-        <div class="container mx-auto px-6 max-w-4xl text-center">
-            <h2 class="text-2xl font-bold mb-8">Dikembangkan Sesuai Standar Kompetensi Nasional</h2>
-            <div class="flex flex-col md:flex-row justify-center gap-8 md:gap-16">
-                <div class="flex items-center gap-4 justify-center">
-                    <i data-lucide="award" class="w-10 h-10 text-primary"></i>
-                    <div class="text-left">
-                        <p class="font-bold">Technical Analyst</p>
-                        <p class="text-sm text-slate-400">Sertifikasi BNSP</p>
+    <section id="kredibilitas" class="py-20 bg-slate-50 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">Dirancang dengan standar presisi.</h2>
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                        Arsitektur sistem kami tidak hanya mengutamakan fungsionalitas, tetapi juga akurasi data. Dikembangkan oleh profesional bersertifikasi untuk memastikan operasional bisnis Anda berjalan tanpa hambatan.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 bg-white p-4 rounded shadow-sm border border-gray-100">
+                            <i data-lucide="award" class="w-8 h-8 text-primary"></i>
+                            <div>
+                                <p class="font-bold text-slate-900">Technical Analyst (BNSP)</p>
+                                <p class="text-sm text-gray-500">Sertifikasi Analisis Data</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white p-4 rounded shadow-sm border border-gray-100">
+                            <i data-lucide="pen-tool" class="w-8 h-8 text-primary"></i>
+                            <div>
+                                <p class="font-bold text-slate-900">Visual Designer (BNSP)</p>
+                                <p class="text-sm text-gray-500">Standarisasi Antarmuka (UI/UX)</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="flex items-center gap-4 justify-center">
-                    <i data-lucide="award" class="w-10 h-10 text-primary"></i>
-                    <div class="text-left">
-                        <p class="font-bold">Visual Designer</p>
-                        <p class="text-sm text-slate-400">Sertifikasi BNSP</p>
-                    </div>
+                <div class="bg-white p-10 rounded-2xl shadow-xl border border-gray-100 text-center">
+                    <i data-lucide="database" class="w-16 h-16 text-slate-300 mx-auto mb-6"></i>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Infrastruktur Berbasis Cloud</h3>
+                    <p class="text-gray-600">Sinkronisasi data *real-time* yang dapat diakses kapan saja dan di mana saja. Server berkinerja tinggi untuk menjaga kecepatan operasional Anda.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-white border-t border-slate-200 py-10">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="text-slate-900 font-bold text-lg">Syncnindo.</div>
-            <p class="text-slate-500 text-sm">© 2026 Syncnindo Systems. Purwakarta - Jawa Barat.</p>
+    <footer class="bg-white py-12 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-slate-900 font-bold text-xl tracking-tight">Syncnindo</div>
+            <p class="text-gray-500 text-sm">© 2026 Syncnindo Systems. Memberikan solusi otomasi untuk eskalasi bisnis.</p>
         </div>
     </footer>
 
@@ -146,3 +188,4 @@
     </script>
 </body>
 </html>
+
